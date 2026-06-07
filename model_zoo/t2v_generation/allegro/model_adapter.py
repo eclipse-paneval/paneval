@@ -4,8 +4,8 @@ from diffusers import AutoencoderKLAllegro, AllegroPipeline
 from diffusers.utils import export_to_video
 from typing import Dict, Any
 import os
-from flagevalmm.server.utils import get_data, parse_args
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.server.utils import get_data, parse_args
+from evalmm.models.base_model_adapter import BaseModelAdapter
 
 
 class ModelAdapter(BaseModelAdapter):

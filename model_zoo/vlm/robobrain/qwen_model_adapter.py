@@ -7,9 +7,9 @@ from transformers import (
     AutoTokenizer,
     AutoProcessor,
 )
-from flagevalmm.server import ServerDataset
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
-from flagevalmm.server.utils import parse_args, process_images_symbol
+from evalmm.server import ServerDataset
+from evalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.server.utils import parse_args, process_images_symbol
 from qwen_vl_utils import process_vision_info
 
 

@@ -4,9 +4,9 @@ import re
 import numpy as np
 from collections import defaultdict
 import os.path as osp
-from flagevalmm.registry import EVALUATORS
-from flagevalmm.evaluator.pre_process import process_multiple_choice
-from flagevalmm.evaluator import BaseEvaluator
+from evalmm.registry import EVALUATORS
+from evalmm.evaluator.pre_process import process_multiple_choice
+from evalmm.evaluator import BaseEvaluator
 
 EVALUATION_SYSTEM_PROMPT = """
 You are an expert evaluator specializing in assessing fill-in-the-blank questions in primary school to hight school exams. I will give you a question, the expected correct answer, and a test-taker's response to the question.
@@ -48,7 +48,7 @@ class CmmuEvaluator(BaseEvaluator):
         **kwargs,
     ) -> None:
         if use_llm_evaluator:
-            from flagevalmm.models import GPT
+            from evalmm.models import GPT
 
             self.llm = GPT(
                 model_name=kwargs.pop("model_name"),

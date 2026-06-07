@@ -5,14 +5,14 @@ import torch
 import time
 from transformers import MllamaForConditionalGeneration, AutoProcessor
 
-from flagevalmm.server.utils import (
+from evalmm.server.utils import (
     parse_args,
     process_images_symbol,
     load_pil_image,
     default_collate_fn,
 )
-from flagevalmm.server.server_dataset import ServerDataset
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.server.server_dataset import ServerDataset
+from evalmm.models.base_model_adapter import BaseModelAdapter
 
 
 class CustomDataset(ServerDataset):

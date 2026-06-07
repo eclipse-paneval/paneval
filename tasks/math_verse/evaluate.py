@@ -2,10 +2,10 @@ import json
 from copy import deepcopy
 from typing import Dict, List
 
-from flagevalmm.models import GPT
+from evalmm.models import GPT
 from collections import defaultdict
 
-from flagevalmm.evaluator.pre_process import process_multiple_choice
+from evalmm.evaluator.pre_process import process_multiple_choice
 
 
 def maybe_clean_answer(answer: str) -> str:

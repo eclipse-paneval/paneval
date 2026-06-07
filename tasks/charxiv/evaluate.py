@@ -2,7 +2,7 @@ import json
 from copy import deepcopy
 from typing import Dict, List, Tuple
 
-from flagevalmm.models import GPT
+from evalmm.models import GPT
 
 DESCRIPTIVE_GRADING_PREFIX = """
 You will be given <|NUM_TRIPLETS|> pairs of ground truth answers and model responses under an overarching question. You need to go through each of the pairs, extract the final answer from the model response, compare it with the ground truth answer, and then assign a binary score. Avoid providing explanations in your response. If there is no provided model response, please leave the extracted answer empty and give a score of 0. Your response must follow json formats with keys [<|JSON_KEYS|>] where the value for any `extract_answer` is your extracted answer and `score` is an interger in [0, 1] based on the following rules:\n

@@ -31,6 +31,6 @@ if __name__ == "__main__":
     cfg = EasyDict(config)
     extracted_data = process(cfg)
 
-# python flagevalmm/server/run_server.py --tasks tasks/t2i/relscene/relscene_test.py --output-dir /home/dengzijun/output --port 11825
+# python evalmm/server/run_server.py --tasks tasks/t2i/relscene/relscene_test.py --output-dir /home/dengzijun/output --port 11825
 
-# CUDA_VISIBLE_DEVICES=8,9 python flagevalmm/eval.py --output-dir /home/dengzijun/output --tasks tasks/t2i/relscene/relscene_test.py --model black-forest-labs/FLUX.1-schnell --exec model_zoo/t2i/flux/model_adapter.py --server-port 11825
+# CUDA_VISIBLE_DEVICES=8,9 python evalmm/eval.py --output-dir /home/dengzijun/output --tasks tasks/t2i/relscene/relscene_test.py --model black-forest-labs/FLUX.1-schnell --exec model_zoo/t2i/flux/model_adapter.py --server-port 11825

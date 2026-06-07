@@ -1,13 +1,13 @@
 from typing import Dict, Any
 import torch
-from flagevalmm.server.utils import (
+from evalmm.server.utils import (
     process_images_symbol,
     load_pil_image,
     parse_args,
     default_collate_fn,
 )
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
-from flagevalmm.server import ServerDataset
+from evalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.server import ServerDataset
 from transformers import (
     AutoTokenizer,
     AutoModel,
@@ -15,7 +15,7 @@ from transformers import (
     AutoModelForCausalLM,
 )
 from transformers.generation.configuration_utils import GenerationConfig
-from flagevalmm.common.image_utils import concat_images
+from evalmm.common.image_utils import concat_images
 
 import sys
 import math

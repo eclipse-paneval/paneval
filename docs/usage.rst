@@ -6,14 +6,14 @@ This guide covers the various ways to use FlagEvalMM for multimodal model evalua
 Command Line Interface
 ----------------------
 
-FlagEvalMM provides a command-line interface through the ``flagevalmm`` command.
+FlagEvalMM provides a command-line interface through the ``evalmm`` command.
 
 Basic Syntax
 ~~~~~~~~~~~~
 
 .. code-block:: bash
 
-   flagevalmm [OPTIONS] --tasks TASK_FILES --exec MODEL_ADAPTER --model MODEL_NAME
+   evalmm [OPTIONS] --tasks TASK_FILES --exec MODEL_ADAPTER --model MODEL_NAME
 
 Required Arguments
 ~~~~~~~~~~~~~~~~~~
@@ -84,7 +84,7 @@ Evaluate a single task:
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+   evalmm --tasks tasks/mmmu/mmmu_val.py \
            --exec model_zoo/vlm/api_model/model_adapter.py \
            --model llava-hf/llava-onevision-qwen2-7b-ov-chat-hf \
            --output-dir ./results/single-task
@@ -96,7 +96,7 @@ Evaluate multiple tasks in one run:
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu/mmmu_val.py tasks/mmvet/mmvet_v2.py \
+   evalmm --tasks tasks/mmmu/mmmu_val.py tasks/mmvet/mmvet_v2.py \
            --exec model_zoo/vlm/api_model/model_adapter.py \
            --model llava-hf/llava-onevision-qwen2-7b-ov-chat-hf \
            --output-dir ./results/multi-task
@@ -118,7 +118,7 @@ VLLM Backend
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+   evalmm --tasks tasks/mmmu/mmmu_val.py \
            --exec model_zoo/vlm/api_model/model_adapter.py \
            --model llava-hf/llava-onevision-qwen2-7b-ov-chat-hf \
            --backend vllm \
@@ -128,7 +128,7 @@ Multi-GPU with VLLM:
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+   evalmm --tasks tasks/mmmu/mmmu_val.py \
            --exec model_zoo/vlm/api_model/model_adapter.py \
            --model Qwen/Qwen2-VL-72B-Instruct \
            --backend vllm \
@@ -139,7 +139,7 @@ Transformers Backend
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+   evalmm --tasks tasks/mmmu/mmmu_val.py \
            --exec model_zoo/vlm/llama-vision/model_adapter.py \
            --model meta-llama/Llama-3.2-11B-Vision-Instruct \
            --output-dir ./results/llama-vision
@@ -149,7 +149,7 @@ SGLang Backend
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+   evalmm --tasks tasks/mmmu/mmmu_val.py \
            --exec model_zoo/vlm/api_model/model_adapter.py \
            --model llava-hf/llava-onevision-qwen2-7b-ov-chat-hf \
            --backend sglang \
@@ -162,7 +162,7 @@ OpenAI GPT models:
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+   evalmm --tasks tasks/mmmu/mmmu_val.py \
            --exec model_zoo/vlm/api_model/model_adapter.py \
            --model gpt-4o-mini \
            --url https://api.openai.com/v1/chat/completions \
@@ -239,8 +239,8 @@ Define custom evaluators for specific tasks:
 
 .. code-block:: python
 
-   from flagevalmm.evaluator import BaseEvaluator
-   from flagevalmm.registry import EVALUATORS
+   from evalmm.evaluator import BaseEvaluator
+   from evalmm.registry import EVALUATORS
 
    @EVALUATORS.register_module()
    class CustomEvaluator(BaseEvaluator):
@@ -269,7 +269,7 @@ Caching
 ~~~~~~~
 
 * Enable ``--use-cache`` to avoid re-computation
-* Cache is stored in ``~/.cache/flagevalmm`` by default
+* Cache is stored in ``~/.cache/evalmm`` by default
 * Clear cache periodically to save disk space
 
 Troubleshooting
@@ -290,7 +290,7 @@ Use ``--try-run`` for quick debugging with limited samples:
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+   evalmm --tasks tasks/mmmu/mmmu_val.py \
            --exec model_zoo/vlm/api_model/model_adapter.py \
            --model llava-hf/llava-onevision-qwen2-7b-ov-chat-hf \
            --try-run 

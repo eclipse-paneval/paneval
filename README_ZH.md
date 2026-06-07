@@ -80,8 +80,8 @@ pip install flash-attn --no-build-isolation
 如果你想使用 GPT 评估某些任务（如 charxiv、math_verse 等），需要设置以下环境变量：
 
 ```bash
-export FLAGEVAL_API_KEY=$YOUR_OPENAI_API_KEY
-export FLAGEVAL_BASE_URL="https://api.openai.com/v1"
+export EVALMM_API_KEY=$YOUR_OPENAI_API_KEY
+export EVALMM_BASE_URL="https://api.openai.com/v1"
 ```
 
 ## 使用方法
@@ -91,7 +91,7 @@ FlagevalMM 支持一键评测：
 使用 vllm 作为后端的 llava 示例：
 
 ```bash
-flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+evalmm --tasks tasks/mmmu/mmmu_val.py \
         --exec model_zoo/vlm/api_model/model_adapter.py \
         --model llava-hf/llava-onevision-qwen2-7b-ov-chat-hf \
         --num-workers 8 \
@@ -111,7 +111,7 @@ flagevalmm --tasks tasks/mmmu/mmmu_val.py \
 对于像 Qwen2-VL-72B 这样使用 vllm 的大型模型，可以通过 `--tensor-parallel-size` 参数启用多 GPU 推理：
 
 ```bash
-flagevalmm --tasks tasks/mmmu_pro/mmmu_pro_standard_test.py tasks/ocrbench/ocrbench_test.py \
+evalmm --tasks tasks/mmmu_pro/mmmu_pro_standard_test.py tasks/ocrbench/ocrbench_test.py \
         --exec model_zoo/vlm/api_model/model_adapter.py \
         --model Qwen/Qwen2-VL-72B-Instruct \
         --num-workers 8 \
@@ -140,7 +140,7 @@ flagevalmm --tasks tasks/mmmu_pro/mmmu_pro_standard_test.py tasks/ocrbench/ocrbe
 这样可以简化你的评测命令为：
 
 ```bash
-flagevalmm --tasks tasks/mmmu_pro/mmmu_pro_standard_test.py tasks/ocrbench/ocrbench_test.py \
+evalmm --tasks tasks/mmmu_pro/mmmu_pro_standard_test.py tasks/ocrbench/ocrbench_test.py \
         --exec model_zoo/vlm/api_model/model_adapter.py \
         --cfg qwen2_vl_72b_instruct.json
 ```
@@ -148,7 +148,7 @@ flagevalmm --tasks tasks/mmmu_pro/mmmu_pro_standard_test.py tasks/ocrbench/ocrbe
 不使用 vllm 的模型评测示例（使用 transformers）：
 
 ```bash
-flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+evalmm --tasks tasks/mmmu/mmmu_val.py \
         --exec model_zoo/vlm/llama-vision/model_adapter.py \
         --model meta-llama/Llama-3.2-11B-Vision-Instruct \
         --output-dir ./results/Meta-Llama-3.2-11B-Vision-Instruct
@@ -159,7 +159,7 @@ flagevalmm --tasks tasks/mmmu/mmmu_val.py \
 评测 gpt 风格模型的示例：
 
 ```bash
-flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+evalmm --tasks tasks/mmmu/mmmu_val.py \
         --exec model_zoo/vlm/api_model/model_adapter.py \
         --model gpt-4o-mini \
         --num-workers 4 \
@@ -177,7 +177,7 @@ flagevalmm --tasks tasks/mmmu/mmmu_val.py \
 
 ```bash
 # 启动数据服务器
-python flagevalmm/server/run_server.py --tasks tasks/charxiv/charxiv_val.py --output-dir ./results/qwenvl2-7b --port 11823 
+python evalmm/server/run_server.py --tasks tasks/charxiv/charxiv_val.py --output-dir ./results/qwenvl2-7b --port 11823 
 ```
 
 ### 分别评测
@@ -185,14 +185,14 @@ python flagevalmm/server/run_server.py --tasks tasks/charxiv/charxiv_val.py --ou
 这将在端口 11823 上启动服务器，数据服务器将一直运行直到你停止它。
 
 ```bash
-python flagevalmm/eval.py --output-dir ./results/qwenvl2-7b --tasks tasks/charxiv/charxiv_val.py --model your_model_path/Qwen2-VL-7B-Instruct/ --exec model_zoo/vlm/qwen_vl/model_adapter.py --server-port 11823
+python evalmm/eval.py --output-dir ./results/qwenvl2-7b --tasks tasks/charxiv/charxiv_val.py --model your_model_path/Qwen2-VL-7B-Instruct/ --exec model_zoo/vlm/qwen_vl/model_adapter.py --server-port 11823
 ```
 
 这将在数据服务器上评测模型。
 如果你已经从数据服务器生成了结果，可以直接评测结果：
 
 ```bash
-python flagevalmm/eval.py --output-dir ./results/qwenvl2-7b --exec model_zoo/vlm/qwen_vl/model_adapter.py --tasks tasks/charxiv/charxiv_val.py --without-infer
+python evalmm/eval.py --output-dir ./results/qwenvl2-7b --exec model_zoo/vlm/qwen_vl/model_adapter.py --tasks tasks/charxiv/charxiv_val.py --without-infer
 ```
 
 ## 添加你自己的任务
@@ -203,7 +203,7 @@ python flagevalmm/eval.py --output-dir ./results/qwenvl2-7b --exec model_zoo/vlm
 
 在任务配置文件中，我们默认从 HuggingFace 下载数据集。如果你需要使用自己的数据集，请在配置文件中将 `dataset_path` 设置为你的数据集路径。
 
-FlagEvalMM 会预处理来自各种来源的数据，处理后的数据默认存储在 `~/.cache/flagevalmm` 目录中。你可以通过修改 `FLAGEVALMM_CACHE` 环境变量来更改数据存储路径。
+FlagEvalMM 会预处理来自各种来源的数据，处理后的数据默认存储在 `~/.cache/evalmm` 目录中。你可以通过修改 `EVALMM_CACHE` 环境变量来更改数据存储路径。
 
 ## 引用
 

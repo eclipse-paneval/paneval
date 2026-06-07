@@ -1,10 +1,10 @@
 import re
 from latex2sympy2 import latex2sympy
 
-from flagevalmm.evaluator.pre_process import normalize_string
+from evalmm.evaluator.pre_process import normalize_string
 from typing import Dict, List
 
-from flagevalmm.evaluator.pre_process import process_multiple_choice
+from evalmm.evaluator.pre_process import process_multiple_choice
 
 
 def maybe_clean_answer(answer: str) -> str:

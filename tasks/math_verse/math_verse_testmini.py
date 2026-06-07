@@ -1,4 +1,4 @@
-import os
+from evalmm.common.const import EVALMM_API_KEY, EVALMM_BASE_URL
 
 config = dict(
     dataset_path="AI4Math/MathVerse",
@@ -30,8 +30,8 @@ evaluator = dict(
     eval_func="evaluate.py",
     use_llm_evaluator=True,
     use_cache=True,
-    base_url=os.getenv("FLAGEVAL_BASE_URL"),
-    api_key=os.getenv("FLAGEVAL_API_KEY"),
+    base_url=EVALMM_BASE_URL,
+    api_key=EVALMM_API_KEY,
     eval_model_name="gpt-5-mini",
     chat_name="math_verse_eval",
 )

@@ -6,7 +6,7 @@ The evaluator module contains various evaluation methods for different multimoda
 Base Evaluator
 --------------
 
-.. automodule:: flagevalmm.evaluator.base_evaluator
+.. automodule:: evalmm.evaluator.base_evaluator
    :members:
    :undoc-members:
    :show-inheritance:
@@ -14,7 +14,7 @@ Base Evaluator
 MMMU Evaluator
 --------------
 
-.. automodule:: flagevalmm.evaluator.mmmu_dataset_evaluator
+.. automodule:: evalmm.evaluator.mmmu_dataset_evaluator
    :members:
    :undoc-members:
    :show-inheritance:
@@ -22,7 +22,7 @@ MMMU Evaluator
 Extract Evaluator
 -----------------
 
-.. automodule:: flagevalmm.evaluator.extract_evaluator
+.. automodule:: evalmm.evaluator.extract_evaluator
    :members:
    :undoc-members:
    :show-inheritance:
@@ -30,7 +30,7 @@ Extract Evaluator
 Retrieval Evaluator
 -------------------
 
-.. automodule:: flagevalmm.evaluator.retrieval_evaluator
+.. automodule:: evalmm.evaluator.retrieval_evaluator
    :members:
    :undoc-members:
    :show-inheritance:
@@ -38,7 +38,7 @@ Retrieval Evaluator
 Common Types
 ------------
 
-.. automodule:: flagevalmm.evaluator.common_types
+.. automodule:: evalmm.evaluator.common_types
    :members:
    :undoc-members:
    :show-inheritance:
@@ -46,7 +46,7 @@ Common Types
 Pre-processing Utilities
 ------------------------
 
-.. automodule:: flagevalmm.evaluator.pre_process
+.. automodule:: evalmm.evaluator.pre_process
    :members:
    :undoc-members:
    :show-inheritance: 

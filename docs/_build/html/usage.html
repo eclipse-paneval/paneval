@@ -215,7 +215,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="api/flagevalmm.html">flagevalmm Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/evalmm.html">evalmm Package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/models.html">Models Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/evaluator.html">Evaluator Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/dataset.html">Dataset Module</a></li>
@@ -273,10 +273,10 @@
 <p>This guide covers the various ways to use FlagEvalMM for multimodal model evaluation.</p>
 <section id="command-line-interface">
 <h2>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Link to this heading">¶</a></h2>
-<p>FlagEvalMM provides a command-line interface through the <code class="docutils literal notranslate"><span class="pre">flagevalmm</span></code> command.</p>
+<p>FlagEvalMM provides a command-line interface through the <code class="docutils literal notranslate"><span class="pre">evalmm</span></code> command.</p>
 <section id="basic-syntax">
 <h3>Basic Syntax<a class="headerlink" href="#basic-syntax" title="Link to this heading">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>--tasks<span class="w"> </span>TASK_FILES<span class="w"> </span>--exec<span class="w"> </span>MODEL_ADAPTER<span class="w"> </span>--model<span class="w"> </span>MODEL_NAME
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>--tasks<span class="w"> </span>TASK_FILES<span class="w"> </span>--exec<span class="w"> </span>MODEL_ADAPTER<span class="w"> </span>--model<span class="w"> </span>MODEL_NAME
 </pre></div>
 </div>
 </section>
@@ -343,7 +343,7 @@
 <section id="single-task-evaluation">
 <h3>Single Task Evaluation<a class="headerlink" href="#single-task-evaluation" title="Link to this heading">¶</a></h3>
 <p>Evaluate a single task:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--exec<span class="w"> </span>model_zoo/vlm/api_model/model_adapter.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--model<span class="w"> </span>llava-hf/llava-onevision-qwen2-7b-ov-chat-hf<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--output-dir<span class="w"> </span>./results/single-task
@@ -353,7 +353,7 @@
 <section id="multi-task-evaluation">
 <h3>Multi-Task Evaluation<a class="headerlink" href="#multi-task-evaluation" title="Link to this heading">¶</a></h3>
 <p>Evaluate multiple tasks in one run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span>tasks/mmvet/mmvet_v2.py<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span>tasks/mmvet/mmvet_v2.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--exec<span class="w"> </span>model_zoo/vlm/api_model/model_adapter.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--model<span class="w"> </span>llava-hf/llava-onevision-qwen2-7b-ov-chat-hf<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--output-dir<span class="w"> </span>./results/multi-task
@@ -372,7 +372,7 @@
 <h2>Backend-Specific Usage<a class="headerlink" href="#backend-specific-usage" title="Link to this heading">¶</a></h2>
 <section id="vllm-backend">
 <h3>VLLM Backend<a class="headerlink" href="#vllm-backend" title="Link to this heading">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--exec<span class="w"> </span>model_zoo/vlm/api_model/model_adapter.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--model<span class="w"> </span>llava-hf/llava-onevision-qwen2-7b-ov-chat-hf<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--backend<span class="w"> </span>vllm<span class="w"> </span><span class="se">\</span>
@@ -380,7 +380,7 @@
 </pre></div>
 </div>
 <p>Multi-GPU with VLLM:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--exec<span class="w"> </span>model_zoo/vlm/api_model/model_adapter.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--model<span class="w"> </span>Qwen/Qwen2-VL-72B-Instruct<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--backend<span class="w"> </span>vllm<span class="w"> </span><span class="se">\</span>
@@ -390,7 +390,7 @@
 </section>
 <section id="transformers-backend">
 <h3>Transformers Backend<a class="headerlink" href="#transformers-backend" title="Link to this heading">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--exec<span class="w"> </span>model_zoo/vlm/llama-vision/model_adapter.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--model<span class="w"> </span>meta-llama/Llama-3.2-11B-Vision-Instruct<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--output-dir<span class="w"> </span>./results/llama-vision
@@ -399,7 +399,7 @@
 </section>
 <section id="sglang-backend">
 <h3>SGLang Backend<a class="headerlink" href="#sglang-backend" title="Link to this heading">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--exec<span class="w"> </span>model_zoo/vlm/api_model/model_adapter.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--model<span class="w"> </span>llava-hf/llava-onevision-qwen2-7b-ov-chat-hf<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--backend<span class="w"> </span>sglang<span class="w"> </span><span class="se">\</span>
@@ -410,7 +410,7 @@
 <section id="api-based-models">
 <h3>API-Based Models<a class="headerlink" href="#api-based-models" title="Link to this heading">¶</a></h3>
 <p>OpenAI GPT models:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--exec<span class="w"> </span>model_zoo/vlm/api_model/model_adapter.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--model<span class="w"> </span>gpt-4o-mini<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--url<span class="w"> </span>https://api.openai.com/v1/chat/completions<span class="w"> </span><span class="se">\</span>
@@ -479,8 +479,8 @@
 <section id="custom-evaluation-metrics">
 <h3>Custom Evaluation Metrics<a class="headerlink" href="#custom-evaluation-metrics" title="Link to this heading">¶</a></h3>
 <p>Define custom evaluators for specific tasks:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flagevalmm.evaluator</span> <span class="kn">import</span> <span class="n">BaseEvaluator</span>
-<span class="kn">from</span> <span class="nn">flagevalmm.registry</span> <span class="kn">import</span> <span class="n">EVALUATORS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">evalmm.evaluator</span> <span class="kn">import</span> <span class="n">BaseEvaluator</span>
+<span class="kn">from</span> <span class="nn">evalmm.registry</span> <span class="kn">import</span> <span class="n">EVALUATORS</span>
 
 <span class="nd">@EVALUATORS</span><span class="o">.</span><span class="n">register_module</span><span class="p">()</span>
 <span class="k">class</span> <span class="nc">CustomEvaluator</span><span class="p">(</span><span class="n">BaseEvaluator</span><span class="p">):</span>
@@ -513,7 +513,7 @@
 <h3>Caching<a class="headerlink" href="#caching" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Enable <code class="docutils literal notranslate"><span class="pre">--use-cache</span></code> to avoid re-computation</p></li>
-<li><p>Cache is stored in <code class="docutils literal notranslate"><span class="pre">~/.cache/flagevalmm</span></code> by default</p></li>
+<li><p>Cache is stored in <code class="docutils literal notranslate"><span class="pre">~/.cache/evalmm</span></code> by default</p></li>
 <li><p>Clear cache periodically to save disk space</p></li>
 </ul>
 </section>
@@ -530,7 +530,7 @@
 <section id="debug-mode">
 <h3>Debug Mode<a class="headerlink" href="#debug-mode" title="Link to this heading">¶</a></h3>
 <p>Use <code class="docutils literal notranslate"><span class="pre">--try-run</span></code> for quick debugging with limited samples:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--exec<span class="w"> </span>model_zoo/vlm/api_model/model_adapter.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--model<span class="w"> </span>llava-hf/llava-onevision-qwen2-7b-ov-chat-hf<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--try-run

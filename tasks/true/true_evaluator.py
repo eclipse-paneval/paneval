@@ -1,8 +1,8 @@
 from typing import Dict, List, Union
 import unicodedata
 from collections import defaultdict
-from flagevalmm.evaluator import BaseEvaluator
-from flagevalmm.registry import EVALUATORS
+from evalmm.evaluator import BaseEvaluator
+from evalmm.registry import EVALUATORS
 
 
 class SubstringEditDistance:

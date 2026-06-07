@@ -1,6 +1,6 @@
 from typing import Dict, List
-from flagevalmm.evaluator.common_types import evaluate_multiple_choice
-from flagevalmm.evaluator.pre_process import normalize_string
+from evalmm.evaluator.common_types import evaluate_multiple_choice
+from evalmm.evaluator.pre_process import normalize_string
 from word2number import w2n
 import numpy as np
 import re

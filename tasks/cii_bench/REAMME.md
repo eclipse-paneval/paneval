@@ -31,4 +31,4 @@ The benchmark aims to:
 
 ## Framework Integration
 
-This version has been modified to work within the flagevalmm framework.
+This version has been modified to work within the evalmm framework.

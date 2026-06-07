@@ -4,9 +4,9 @@ import torch
 import time
 from transformers import AutoProcessor, AutoModelForVision2Seq
 
-from flagevalmm.server.utils import parse_args, process_images_symbol, load_pil_image
-from flagevalmm.server.server_dataset import ServerDataset
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.server.utils import parse_args, process_images_symbol, load_pil_image
+from evalmm.server.server_dataset import ServerDataset
+from evalmm.models.base_model_adapter import BaseModelAdapter
 import re
 
 

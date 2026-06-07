@@ -2,10 +2,10 @@ from typing import Optional, List, Dict, Any
 
 import time
 
-from flagevalmm.server.utils import parse_args
-from flagevalmm.server.server_dataset import ServerDataset
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
-from flagevalmm.prompt.prompt_tools import encode_image
+from evalmm.server.utils import parse_args
+from evalmm.server.server_dataset import ServerDataset
+from evalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.prompt.prompt_tools import encode_image
 
 import re
 from vllm import LLM

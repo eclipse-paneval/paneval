@@ -1,17 +1,17 @@
 from typing import Dict, Any
 import torch
-from flagevalmm.server.utils import (
+from evalmm.server.utils import (
     process_images_symbol,
     load_pil_image,
     parse_args,
     default_collate_fn,
 )
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
-from flagevalmm.server import ServerDataset
+from evalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.server import ServerDataset
 from torchvision.transforms.functional import InterpolationMode
 from transformers import AutoModel, AutoTokenizer
 import torchvision.transforms as T
-from flagevalmm.common.image_utils import concat_images
+from evalmm.common.image_utils import concat_images
 
 IMAGENET_MEAN = (0.485, 0.456, 0.406)
 IMAGENET_STD = (0.229, 0.224, 0.225)

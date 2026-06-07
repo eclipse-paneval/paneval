@@ -10,9 +10,9 @@ import torchvision.transforms as T
 
 from torchvision.transforms.functional import InterpolationMode
 
-from flagevalmm.server import ServerDataset
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
-from flagevalmm.server.utils import parse_args
+from evalmm.server import ServerDataset
+from evalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.server.utils import parse_args
 
 
 # modified from https://huggingface.co/OpenGVLab/InternVL2_5-78B

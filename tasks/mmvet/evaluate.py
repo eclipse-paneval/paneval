@@ -3,8 +3,8 @@ import time
 from typing import Dict, List, Tuple
 import pandas as pd
 from collections import Counter
-from flagevalmm.models import GPT
-from flagevalmm.common.logger import get_logger
+from evalmm.models import GPT
+from evalmm.common.logger import get_logger
 
 logger = get_logger(__name__)
 

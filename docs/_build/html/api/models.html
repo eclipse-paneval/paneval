@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Evaluator Module" href="evaluator.html" /><link rel="prev" title="flagevalmm Package" href="flagevalmm.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Evaluator Module" href="evaluator.html" /><link rel="prev" title="evalmm Package" href="evalmm.html" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
         <title>Models Module - FlagEvalMM 0.3.5 documentation</title>
@@ -215,7 +215,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="flagevalmm.html">flagevalmm Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evalmm.html">evalmm Package</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Models Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="evaluator.html">Evaluator Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset Module</a></li>
@@ -271,55 +271,55 @@
           <section id="models-module">
 <h1>Models Module<a class="headerlink" href="#models-module" title="Link to this heading">¶</a></h1>
 <p>The models module provides model management and caching functionality.</p>
-<section id="module-flagevalmm.models.model_cache">
-<span id="model-cache"></span><h2>Model Cache<a class="headerlink" href="#module-flagevalmm.models.model_cache" title="Link to this heading">¶</a></h2>
+<section id="module-evalmm.models.model_cache">
+<span id="model-cache"></span><h2>Model Cache<a class="headerlink" href="#module-evalmm.models.model_cache" title="Link to this heading">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="flagevalmm.models.model_cache.calculate_hash">
-<span class="sig-prename descclassname"><span class="pre">flagevalmm.models.model_cache.</span></span><span class="sig-name descname"><span class="pre">calculate_hash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><span class="pre">Any</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/flagevalmm/models/model_cache.html#calculate_hash"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#flagevalmm.models.model_cache.calculate_hash" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evalmm.models.model_cache.calculate_hash">
+<span class="sig-prename descclassname"><span class="pre">evalmm.models.model_cache.</span></span><span class="sig-name descname"><span class="pre">calculate_hash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><span class="pre">Any</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/evalmm/models/model_cache.html#calculate_hash"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evalmm.models.model_cache.calculate_hash" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="flagevalmm.models.model_cache.ModelCache">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">flagevalmm.models.model_cache.</span></span><span class="sig-name descname"><span class="pre">ModelCache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'model_cache'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./.cache'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/flagevalmm/models/model_cache.html#ModelCache"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#flagevalmm.models.model_cache.ModelCache" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evalmm.models.model_cache.ModelCache">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evalmm.models.model_cache.</span></span><span class="sig-name descname"><span class="pre">ModelCache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'model_cache'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./.cache'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evalmm/models/model_cache.html#ModelCache"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evalmm.models.model_cache.ModelCache" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="flagevalmm.models.model_cache.ModelCache.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'model_cache'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./.cache'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/flagevalmm/models/model_cache.html#ModelCache.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#flagevalmm.models.model_cache.ModelCache.__init__" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evalmm.models.model_cache.ModelCache.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'model_cache'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./.cache'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evalmm/models/model_cache.html#ModelCache.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evalmm.models.model_cache.ModelCache.__init__" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="flagevalmm.models.model_cache.ModelCache.insert">
-<span class="sig-name descname"><span class="pre">insert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">question</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">answer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/flagevalmm/models/model_cache.html#ModelCache.insert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#flagevalmm.models.model_cache.ModelCache.insert" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evalmm.models.model_cache.ModelCache.insert">
+<span class="sig-name descname"><span class="pre">insert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">question</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">answer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/evalmm/models/model_cache.html#ModelCache.insert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evalmm.models.model_cache.ModelCache.insert" title="Link to this definition">¶</a></dt>
 <dd><p>Thread-safe insert operation</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="flagevalmm.models.model_cache.ModelCache.get">
-<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">question</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/flagevalmm/models/model_cache.html#ModelCache.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#flagevalmm.models.model_cache.ModelCache.get" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evalmm.models.model_cache.ModelCache.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">question</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/evalmm/models/model_cache.html#ModelCache.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evalmm.models.model_cache.ModelCache.get" title="Link to this definition">¶</a></dt>
 <dd><p>Thread-safe query operation</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="flagevalmm.models.model_cache.ModelCache.clear">
-<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/flagevalmm/models/model_cache.html#ModelCache.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#flagevalmm.models.model_cache.ModelCache.clear" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evalmm.models.model_cache.ModelCache.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/evalmm/models/model_cache.html#ModelCache.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evalmm.models.model_cache.ModelCache.clear" title="Link to this definition">¶</a></dt>
 <dd><p>Clear the cache</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="flagevalmm.models.model_cache.ModelCache.close">
-<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/flagevalmm/models/model_cache.html#ModelCache.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#flagevalmm.models.model_cache.ModelCache.close" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evalmm.models.model_cache.ModelCache.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/evalmm/models/model_cache.html#ModelCache.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evalmm.models.model_cache.ModelCache.close" title="Link to this definition">¶</a></dt>
 <dd><p>Close the database connection for the current thread</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="flagevalmm.models.model_cache.ModelCache.exists">
-<span class="sig-name descname"><span class="pre">exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">question</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></span><a class="reference internal" href="../_modules/flagevalmm/models/model_cache.html#ModelCache.exists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#flagevalmm.models.model_cache.ModelCache.exists" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evalmm.models.model_cache.ModelCache.exists">
+<span class="sig-name descname"><span class="pre">exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">question</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></span><a class="reference internal" href="../_modules/evalmm/models/model_cache.html#ModelCache.exists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evalmm.models.model_cache.ModelCache.exists" title="Link to this definition">¶</a></dt>
 <dd><p>Check if a question exists in the cache</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="flagevalmm.models.model_cache.ModelCache.delete">
-<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">question</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/flagevalmm/models/model_cache.html#ModelCache.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#flagevalmm.models.model_cache.ModelCache.delete" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evalmm.models.model_cache.ModelCache.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">question</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/evalmm/models/model_cache.html#ModelCache.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evalmm.models.model_cache.ModelCache.delete" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -345,14 +345,14 @@
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="flagevalmm.html">
+          <a class="prev-page" href="evalmm.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">flagevalmm Package</div>
+                <div class="title">evalmm Package</div>
                 
               </div>
             </a>
@@ -387,16 +387,16 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Models Module</a><ul>
-<li><a class="reference internal" href="#module-flagevalmm.models.model_cache">Model Cache</a><ul>
-<li><a class="reference internal" href="#flagevalmm.models.model_cache.calculate_hash"><code class="docutils literal notranslate"><span class="pre">calculate_hash()</span></code></a></li>
-<li><a class="reference internal" href="#flagevalmm.models.model_cache.ModelCache"><code class="docutils literal notranslate"><span class="pre">ModelCache</span></code></a><ul>
-<li><a class="reference internal" href="#flagevalmm.models.model_cache.ModelCache.__init__"><code class="docutils literal notranslate"><span class="pre">ModelCache.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#flagevalmm.models.model_cache.ModelCache.insert"><code class="docutils literal notranslate"><span class="pre">ModelCache.insert()</span></code></a></li>
-<li><a class="reference internal" href="#flagevalmm.models.model_cache.ModelCache.get"><code class="docutils literal notranslate"><span class="pre">ModelCache.get()</span></code></a></li>
-<li><a class="reference internal" href="#flagevalmm.models.model_cache.ModelCache.clear"><code class="docutils literal notranslate"><span class="pre">ModelCache.clear()</span></code></a></li>
-<li><a class="reference internal" href="#flagevalmm.models.model_cache.ModelCache.close"><code class="docutils literal notranslate"><span class="pre">ModelCache.close()</span></code></a></li>
-<li><a class="reference internal" href="#flagevalmm.models.model_cache.ModelCache.exists"><code class="docutils literal notranslate"><span class="pre">ModelCache.exists()</span></code></a></li>
-<li><a class="reference internal" href="#flagevalmm.models.model_cache.ModelCache.delete"><code class="docutils literal notranslate"><span class="pre">ModelCache.delete()</span></code></a></li>
+<li><a class="reference internal" href="#module-evalmm.models.model_cache">Model Cache</a><ul>
+<li><a class="reference internal" href="#evalmm.models.model_cache.calculate_hash"><code class="docutils literal notranslate"><span class="pre">calculate_hash()</span></code></a></li>
+<li><a class="reference internal" href="#evalmm.models.model_cache.ModelCache"><code class="docutils literal notranslate"><span class="pre">ModelCache</span></code></a><ul>
+<li><a class="reference internal" href="#evalmm.models.model_cache.ModelCache.__init__"><code class="docutils literal notranslate"><span class="pre">ModelCache.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#evalmm.models.model_cache.ModelCache.insert"><code class="docutils literal notranslate"><span class="pre">ModelCache.insert()</span></code></a></li>
+<li><a class="reference internal" href="#evalmm.models.model_cache.ModelCache.get"><code class="docutils literal notranslate"><span class="pre">ModelCache.get()</span></code></a></li>
+<li><a class="reference internal" href="#evalmm.models.model_cache.ModelCache.clear"><code class="docutils literal notranslate"><span class="pre">ModelCache.clear()</span></code></a></li>
+<li><a class="reference internal" href="#evalmm.models.model_cache.ModelCache.close"><code class="docutils literal notranslate"><span class="pre">ModelCache.close()</span></code></a></li>
+<li><a class="reference internal" href="#evalmm.models.model_cache.ModelCache.exists"><code class="docutils literal notranslate"><span class="pre">ModelCache.exists()</span></code></a></li>
+<li><a class="reference internal" href="#evalmm.models.model_cache.ModelCache.delete"><code class="docutils literal notranslate"><span class="pre">ModelCache.delete()</span></code></a></li>
 </ul>
 </li>
 </ul>

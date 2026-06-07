@@ -3,7 +3,7 @@ from PIL import Image
 from collections import defaultdict
 import os.path as osp
 
-from flagevalmm.evaluator.point_utils import text2pts, calculate_mask_score
+from evalmm.evaluator.point_utils import text2pts, calculate_mask_score
 
 
 def get_result(annotations: Dict, predictions: List[Dict]) -> Dict:

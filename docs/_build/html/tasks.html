@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="flagevalmm Package" href="api/flagevalmm.html" /><link rel="prev" title="Configuration" href="configuration.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="evalmm Package" href="api/evalmm.html" /><link rel="prev" title="Configuration" href="configuration.html" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
         <title>Add New Tasks - FlagEvalMM 0.3.5 documentation</title>
@@ -215,7 +215,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="api/flagevalmm.html">flagevalmm Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/evalmm.html">evalmm Package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/models.html">Models Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/evaluator.html">Evaluator Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/dataset.html">Dataset Module</a></li>
@@ -272,9 +272,9 @@
 <h1>Add New Tasks<a class="headerlink" href="#add-new-tasks" title="Link to this heading">¶</a></h1>
 <p>FlagEvalMM supports a wide variety of multimodal evaluation tasks and benchmarks.</p>
 <p>You can create custom tasks by implementing dataset and evaluator classes:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flagevalmm.dataset</span> <span class="kn">import</span> <span class="n">BaseDataset</span>
-<span class="kn">from</span> <span class="nn">flagevalmm.evaluator</span> <span class="kn">import</span> <span class="n">BaseEvaluator</span>
-<span class="kn">from</span> <span class="nn">flagevalmm.registry</span> <span class="kn">import</span> <span class="n">DATASETS</span><span class="p">,</span> <span class="n">EVALUATORS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">evalmm.dataset</span> <span class="kn">import</span> <span class="n">BaseDataset</span>
+<span class="kn">from</span> <span class="nn">evalmm.evaluator</span> <span class="kn">import</span> <span class="n">BaseEvaluator</span>
+<span class="kn">from</span> <span class="nn">evalmm.registry</span> <span class="kn">import</span> <span class="n">DATASETS</span><span class="p">,</span> <span class="n">EVALUATORS</span>
 
 <span class="nd">@DATASETS</span><span class="o">.</span><span class="n">register_module</span><span class="p">()</span>
 <span class="k">class</span> <span class="nc">CustomDataset</span><span class="p">(</span><span class="n">BaseDataset</span><span class="p">):</span>
@@ -296,12 +296,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="api/flagevalmm.html">
+          <a class="next-page" href="api/evalmm.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">flagevalmm Package</div>
+                <div class="title">evalmm Package</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>

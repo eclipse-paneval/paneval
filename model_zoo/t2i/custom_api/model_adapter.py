@@ -3,10 +3,10 @@ import os.path as osp
 import json
 import asyncio
 from typing import Dict
-from flagevalmm.models import Kolors, SenseMirage, HunyuanImage, DoubaoImage, Flux
-from flagevalmm.common.logger import get_logger
-from flagevalmm.server.utils import get_meta, submit, get_data, parse_args
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.models import Kolors, SenseMirage, HunyuanImage, DoubaoImage, Flux
+from evalmm.common.logger import get_logger
+from evalmm.server.utils import get_meta, submit, get_data, parse_args
+from evalmm.models.base_model_adapter import BaseModelAdapter
 
 logger = get_logger(__name__)
 

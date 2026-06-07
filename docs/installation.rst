@@ -87,8 +87,8 @@ If you want to evaluate tasks using GPT models (like charxiv, math_verse, etc.),
 
 .. code-block:: bash
 
-   export FLAGEVAL_API_KEY=$YOUR_OPENAI_API_KEY
-   export FLAGEVAL_BASE_URL="https://api.openai.com/v1"
+   export EVALMM_API_KEY=$YOUR_OPENAI_API_KEY
+   export EVALMM_BASE_URL="https://api.openai.com/v1"
 
 For other API providers, adjust the base URL accordingly.
 
@@ -99,7 +99,7 @@ To verify your installation, run:
 
 .. code-block:: bash
 
-   flagevalmm --help
+   evalmm --help
 
 You should see the help message with available command-line options.
 

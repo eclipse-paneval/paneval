@@ -6,7 +6,7 @@ The models module provides model management and caching functionality.
 Model Cache
 -----------
 
-.. automodule:: flagevalmm.models.model_cache
+.. automodule:: evalmm.models.model_cache
    :members:
    :undoc-members:
    :show-inheritance:

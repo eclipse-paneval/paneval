@@ -3,8 +3,8 @@ import json
 from diffusers import DiffusionPipeline
 from tqdm import tqdm
 from typing import Dict, Any
-from flagevalmm.server.utils import get_data, parse_args
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.server.utils import get_data, parse_args
+from evalmm.models.base_model_adapter import BaseModelAdapter
 from diffusers.utils import export_to_video
 
 

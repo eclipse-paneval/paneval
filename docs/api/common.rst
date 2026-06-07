@@ -6,22 +6,22 @@ The common module provides shared utilities and server components.
 Server Components
 -----------------
 
-.. automodule:: flagevalmm.server
+.. automodule:: evalmm.server
    :members:
    :undoc-members:
    :show-inheritance:
 
-.. automodule:: flagevalmm.server.server_dataset
+.. automodule:: evalmm.server.server_dataset
    :members:
    :undoc-members:
    :show-inheritance:
 
-.. automodule:: flagevalmm.server.model_server
+.. automodule:: evalmm.server.model_server
    :members:
    :undoc-members:
    :show-inheritance:
 
-.. automodule:: flagevalmm.server.utils
+.. automodule:: evalmm.server.utils
    :members:
    :undoc-members:
    :show-inheritance:

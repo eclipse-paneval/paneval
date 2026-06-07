@@ -3,16 +3,16 @@ import json
 import time
 from typing import Dict, Any
 import os
-from flagevalmm.server.utils import (
+from evalmm.server.utils import (
     get_data,
     parse_args,
     default_collate_fn,
     process_images_symbol,
     load_pil_image,
 )
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
-from flagevalmm.server import ServerDataset
-from flagevalmm.common.logger import get_logger
+from evalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.server import ServerDataset
+from evalmm.common.logger import get_logger
 
 import PIL.Image
 import numpy as np

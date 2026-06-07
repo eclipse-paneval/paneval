@@ -15,11 +15,11 @@ export HF_TOKEN=your_huggingface_token
 1.Model inference
 
 ```bash
-flagevalmm --tasks  tasks/video_safety_bench/video_safety_harmful.py tasks/video_safety_bench/video_safety_benign.py --output-dir output  --cfg model_configs/video_safe/Qwen2.5-VL-7B-Instruct.json --backend vllm
+evalmm --tasks  tasks/video_safety_bench/video_safety_harmful.py tasks/video_safety_bench/video_safety_benign.py --output-dir output  --cfg model_configs/video_safe/Qwen2.5-VL-7B-Instruct.json --backend vllm
 ```
 
 2.Evaluation
 
 ```bash
-flagevalmm --tasks  tasks/video_safety_bench/video_safety_harmful.py tasks/video_safety_bench/video_safety_benign.py --output-dir output  --cfg model_configs/video_safe/Qwen2.5-VL-7B-Instruct.json --backend vllm --wi
+evalmm --tasks  tasks/video_safety_bench/video_safety_harmful.py tasks/video_safety_bench/video_safety_benign.py --output-dir output  --cfg model_configs/video_safe/Qwen2.5-VL-7B-Instruct.json --backend vllm --wi
 ```

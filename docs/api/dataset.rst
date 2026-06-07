@@ -6,7 +6,7 @@ The dataset module provides various dataset implementations and preprocessing ut
 Data Preprocessor
 -----------------
 
-.. automodule:: flagevalmm.dataset.data_preprocessor
+.. automodule:: evalmm.dataset.data_preprocessor
    :members:
    :undoc-members:
    :show-inheritance:

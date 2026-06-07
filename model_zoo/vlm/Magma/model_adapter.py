@@ -7,10 +7,10 @@ from torch.utils.data import DataLoader
 from transformers import AutoModelForCausalLM
 from transformers import AutoProcessor
 
-from flagevalmm.server.utils import parse_args, load_pil_image
-from flagevalmm.server.server_dataset import ServerDataset
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
-from flagevalmm.common.video_utils import load_image_or_video
+from evalmm.server.utils import parse_args, load_pil_image
+from evalmm.server.server_dataset import ServerDataset
+from evalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.common.video_utils import load_image_or_video
 
 
 def replace_images_symbol(text):

@@ -2,9 +2,9 @@ import json
 import glob
 import os.path as osp
 
-from flagevalmm.dataset.vqa_base_dataset import VqaBaseDataset
-from flagevalmm.registry import DATASETS, PROMPTS
-from flagevalmm.common.const import FLAGEVALMM_DATASETS_CACHE_DIR
+from evalmm.dataset.vqa_base_dataset import VqaBaseDataset
+from evalmm.registry import DATASETS, PROMPTS
+from evalmm.common.const import EVALMM_DATASETS_CACHE_DIR
 
 
 @DATASETS.register_module()
@@ -13,7 +13,7 @@ class CmmuDataset(VqaBaseDataset):
         self,
         name,
         data_root=None,
-        cache_dir=FLAGEVALMM_DATASETS_CACHE_DIR,
+        cache_dir=EVALMM_DATASETS_CACHE_DIR,
         config=None,
         prompt_template=None,
         debug=False,

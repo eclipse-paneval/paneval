@@ -3,10 +3,10 @@ import os
 import asyncio
 import concurrent.futures
 from typing import Dict, Any
-from flagevalmm.server.utils import get_data, parse_args
-from flagevalmm.models.http_image_client import HttpImageClient
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
-from flagevalmm.common.logger import get_logger
+from evalmm.server.utils import get_data, parse_args
+from evalmm.models.http_image_client import HttpImageClient
+from evalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.common.logger import get_logger
 
 logger = get_logger(__name__)
 

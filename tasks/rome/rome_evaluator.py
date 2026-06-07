@@ -1,8 +1,8 @@
 from typing import Dict, List, Tuple, Union
 from collections import defaultdict
-from flagevalmm.evaluator import BaseEvaluator
-from flagevalmm.registry import EVALUATORS
-from flagevalmm.evaluator.pre_process import process_multiple_choice
+from evalmm.evaluator import BaseEvaluator
+from evalmm.registry import EVALUATORS
+from evalmm.evaluator.pre_process import process_multiple_choice
 import re
 
 demo_prompt_score = """# Task Overview

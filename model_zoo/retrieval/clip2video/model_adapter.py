@@ -6,9 +6,9 @@ from transformers import CLIPProcessor
 import torch
 import numpy as np
 from PIL import Image
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.models.base_model_adapter import BaseModelAdapter
 
-from flagevalmm.server.utils import parse_args, get_retrieval_data
+from evalmm.server.utils import parse_args, get_retrieval_data
 
 
 class ModelAdapter(BaseModelAdapter):

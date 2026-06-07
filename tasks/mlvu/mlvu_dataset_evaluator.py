@@ -2,8 +2,8 @@ import json
 import os.path as osp
 
 from typing import List
-from flagevalmm.registry import EVALUATORS
-from flagevalmm.evaluator import BaseEvaluator
+from evalmm.registry import EVALUATORS
+from evalmm.evaluator import BaseEvaluator
 from collections import defaultdict
 
 

@@ -191,7 +191,7 @@ if __name__ == "__main__":
 
     cmds = []
     for model_name, backend in config.model_info:
-        cmd = f"flagevalmm --tasks {' '.join(config.tasks)} --cfg {args.cfg_dir}/{model_name}.json --quiet"
+        cmd = f"evalmm --tasks {' '.join(config.tasks)} --cfg {args.cfg_dir}/{model_name}.json --quiet"
 
         if output_dir:
             cmd += f" --output-dir {output_dir}/{model_name}"

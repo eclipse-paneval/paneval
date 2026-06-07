@@ -2,8 +2,8 @@ import torch
 from transformers import AutoModelForCausalLM, AutoProcessor
 from tqdm import tqdm
 from typing import Dict, Any
-from flagevalmm.server.utils import parse_args, get_retrieval_data
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.server.utils import parse_args, get_retrieval_data
+from evalmm.models.base_model_adapter import BaseModelAdapter
 import numpy as np
 import os
 

@@ -8,11 +8,11 @@ Environment Variables
 
 FlagEvalMM uses several environment variables for configuration:
 
-* ``FLAGEVALMM_CACHE_DIR``: Directory for caching (default: ``~/.cache/flagevalmm``)
-* ``FLAGEVALMM_DATASETS_CACHE_DIR``: Directory for dataset caching
-* ``FLAGEVALMM_MODELS_CACHE_DIR``: Directory for model caching
-* ``FLAGEVAL_API_KEY``: API key for OpenAI models
-* ``FLAGEVAL_BASE_URL``: Base URL for API endpoints
+* ``EVALMM_CACHE_DIR``: Directory for caching (default: ``~/.cache/evalmm``)
+* ``EVALMM_DATASETS_CACHE_DIR``: Directory for dataset caching
+* ``EVALMM_MODELS_CACHE_DIR``: Directory for model caching
+* ``EVALMM_API_KEY``: API key for OpenAI models
+* ``EVALMM_BASE_URL``: Base URL for API endpoints
 
 Model Configuration
 -------------------

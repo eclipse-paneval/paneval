@@ -1,5 +1,5 @@
 from typing import Dict, List
-from flagevalmm.evaluator.common_types import evaluate_multiple_choice
+from evalmm.evaluator.common_types import evaluate_multiple_choice
 import re
 import random
 from collections import defaultdict

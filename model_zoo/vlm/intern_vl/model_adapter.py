@@ -1,14 +1,14 @@
 from typing import Dict, Any
 from transformers import AutoProcessor
 
-from flagevalmm.server.utils import (
+from evalmm.server.utils import (
     process_images_symbol,
     load_pil_image,
     parse_args,
     default_collate_fn,
 )
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
-from flagevalmm.server import ServerDataset
+from evalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.server import ServerDataset
 
 from vllm import LLM, SamplingParams
 

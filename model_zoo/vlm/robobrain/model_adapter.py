@@ -8,14 +8,14 @@ import atexit
 import signal
 from importlib.metadata import version, PackageNotFoundError
 
-from flagevalmm.server import ServerDataset
-from flagevalmm.models.base_model_adapter import BaseModelAdapter
-from flagevalmm.models import HttpClient, Claude, Gemini, GPT, Hunyuan
-from flagevalmm.models.api_response import ApiResponse, ProcessResult
-from flagevalmm.server.model_server import ModelServer
-from flagevalmm.server.utils import get_random_port
-from flagevalmm.common.logger import get_logger
-from flagevalmm.server.utils import parse_args
+from evalmm.server import ServerDataset
+from evalmm.models.base_model_adapter import BaseModelAdapter
+from evalmm.models import HttpClient, Claude, Gemini, GPT, Hunyuan
+from evalmm.models.api_response import ApiResponse, ProcessResult
+from evalmm.server.model_server import ModelServer
+from evalmm.server.utils import get_random_port
+from evalmm.common.logger import get_logger
+from evalmm.server.utils import parse_args
 
 logger = get_logger(__name__)
 

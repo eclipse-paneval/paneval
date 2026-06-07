@@ -32,7 +32,7 @@ across various tasks and metrics.
    :maxdepth: 2
    :caption: API Reference
 
-   api/flagevalmm
+   api/evalmm
    api/models
    api/evaluator
    api/dataset
@@ -67,7 +67,7 @@ Run a basic evaluation:
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+   evalmm --tasks tasks/mmmu/mmmu_val.py \
            --exec model_zoo/vlm/api_model/model_adapter.py \
            --model llava-hf/llava-onevision-qwen2-7b-ov-chat-hf \
            --num-workers 8 \

@@ -2,9 +2,9 @@ from typing import Optional, Any, Dict, Tuple
 import os
 import pandas as pd
 from torch.utils.data import Dataset
-from flagevalmm.registry import DATASETS
-from flagevalmm.common.const import FLAGEVALMM_DATASETS_CACHE_DIR
-from flagevalmm.dataset.utils import get_data_root
+from evalmm.registry import DATASETS
+from evalmm.common.const import EVALMM_DATASETS_CACHE_DIR
+from evalmm.dataset.utils import get_data_root
 import sys
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -19,7 +19,7 @@ class RetrievalMSRVTTDataset(Dataset):
         name: str,
         data_root: Optional[str] = None,
         anno_file: Optional[str] = None,
-        cache_dir: str = FLAGEVALMM_DATASETS_CACHE_DIR,
+        cache_dir: str = EVALMM_DATASETS_CACHE_DIR,
         config: Optional[dict] = None,
         base_dir: Optional[str] = None,
         debug: bool = False,

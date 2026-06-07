@@ -3,7 +3,7 @@ import os
 import os.path as osp
 import numpy as np
 from torch.utils.data import Dataset
-from flagevalmm.registry import DATASETS
+from evalmm.registry import DATASETS
 
 
 @DATASETS.register_module()

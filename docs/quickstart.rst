@@ -10,7 +10,7 @@ After installation, you can run your first evaluation with a simple command:
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+   evalmm --tasks tasks/mmmu/mmmu_val.py \
            --exec model_zoo/vlm/api_model/model_adapter.py \
            --model llava-hf/llava-onevision-qwen2-7b-ov-chat-hf \
            --num-workers 8 \
@@ -39,7 +39,7 @@ Example 1: Evaluating with VLLM Backend
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+   evalmm --tasks tasks/mmmu/mmmu_val.py \
            --exec model_zoo/vlm/api_model/model_adapter.py \
            --model llava-hf/llava-onevision-qwen2-7b-ov-chat-hf \
            --num-workers 8 \
@@ -51,7 +51,7 @@ Example 2: Evaluating with Transformers Backend
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+   evalmm --tasks tasks/mmmu/mmmu_val.py \
            --exec model_zoo/vlm/llama-vision/model_adapter.py \
            --model meta-llama/Llama-3.2-11B-Vision-Instruct \
            --output-dir ./results/llama-vision
@@ -61,7 +61,7 @@ Example 3: Evaluating API-based Models
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+   evalmm --tasks tasks/mmmu/mmmu_val.py \
            --exec model_zoo/vlm/api_model/model_adapter.py \
            --model gpt-4o-mini \
            --num-workers 4 \
@@ -93,7 +93,7 @@ Then run:
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu_pro/mmmu_pro_standard_test.py \
+   evalmm --tasks tasks/mmmu_pro/mmmu_pro_standard_test.py \
            --exec model_zoo/vlm/api_model/model_adapter.py \
            --cfg config.json
 
@@ -104,7 +104,7 @@ For large models that require multiple GPUs:
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu_pro/mmmu_pro_standard_test.py \
+   evalmm --tasks tasks/mmmu_pro/mmmu_pro_standard_test.py \
            --exec model_zoo/vlm/api_model/model_adapter.py \
            --model Qwen/Qwen2-VL-72B-Instruct \
            --num-workers 8 \
@@ -119,7 +119,7 @@ You can evaluate multiple tasks in a single run:
 
 .. code-block:: bash
 
-   flagevalmm --tasks tasks/mmmu/mmmu_val.py tasks/mmvet/mmvet_v2.py tasks/ocrbench/ocrbench_test.py \
+   evalmm --tasks tasks/mmmu/mmmu_val.py tasks/mmvet/mmvet_v2.py tasks/ocrbench/ocrbench_test.py \
            --exec model_zoo/vlm/api_model/model_adapter.py \
            --model llava-hf/llava-onevision-qwen2-7b-ov-chat-hf \
            --output-dir ./results/multi-task \

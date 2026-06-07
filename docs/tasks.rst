@@ -7,9 +7,9 @@ You can create custom tasks by implementing dataset and evaluator classes:
 
 .. code-block:: python
 
-   from flagevalmm.dataset import BaseDataset
-   from flagevalmm.evaluator import BaseEvaluator
-   from flagevalmm.registry import DATASETS, EVALUATORS
+   from evalmm.dataset import BaseDataset
+   from evalmm.evaluator import BaseEvaluator
+   from evalmm.registry import DATASETS, EVALUATORS
 
    @DATASETS.register_module()
    class CustomDataset(BaseDataset):

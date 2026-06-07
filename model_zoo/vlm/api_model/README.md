@@ -9,7 +9,7 @@ You can quickly evaluate the API models by using the following command:
 Example of evaluating gpt-style models:
 
 ```bash
-flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+evalmm --tasks tasks/mmmu/mmmu_val.py \
         --exec model_zoo/vlm/api_model/model_adapter.py \
         --model gpt-4o-mini \
         --num-workers 4 \
@@ -22,7 +22,7 @@ flagevalmm --tasks tasks/mmmu/mmmu_val.py \
 Example of evaluating hunyuan-vision:
 
 ```bash
-flagevalmm --tasks tasks/mmmu/mmmu_val.py \
+evalmm --tasks tasks/mmmu/mmmu_val.py \
         --exec model_zoo/vlm/api_model/model_adapter.py \
         --model hunyuan-vision \
         --model-type hunyuan \

@@ -1,4 +1,4 @@
-import os
+from evalmm.common.const import EVALMM_API_KEY, EVALMM_BASE_URL
 
 
 register_evaluator = {"rome_evaluator.py": "ROMEEvaluator"}
@@ -12,8 +12,8 @@ dataset = dict(
     name="rome_diagrams",
 )
 
-base_url = os.getenv("FLAGEVAL_BASE_URL")
-api_key = os.getenv("FLAGEVAL_API_KEY")
+base_url = EVALMM_BASE_URL
+api_key = EVALMM_API_KEY
 
 evaluator = dict(
     type="ROMEEvaluator",

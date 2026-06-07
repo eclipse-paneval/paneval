@@ -147,7 +147,7 @@ When starting a task, add the `--num-infers` and `--temperature` arguments:
 
 #### GPT-4o-mini:
 ```bash
-flagevalmm --tasks tasks/blink/blink_val.py \
+evalmm --tasks tasks/blink/blink_val.py \
     --exec model_zoo/vlm/api_model/model_adapter.py \
     --model gpt-4o-mini \
     --num-workers 8 \
@@ -162,7 +162,7 @@ flagevalmm --tasks tasks/blink/blink_val.py \
 
 #### Qwen2.5-VL-7B-Instruct:
 ```bash
-flagevalmm --tasks tasks/blink/blink_val.py \
+evalmm --tasks tasks/blink/blink_val.py \
     --cfg model_configs/open/Qwen2.5-VL-7B-Instruct.json \
     --quiet \
     --output-dir ./results/Qwen2.5-VL-7B-Instruct \

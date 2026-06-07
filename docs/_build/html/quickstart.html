@@ -215,7 +215,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="api/flagevalmm.html">flagevalmm Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/evalmm.html">evalmm Package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/models.html">Models Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/evaluator.html">Evaluator Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/dataset.html">Dataset Module</a></li>
@@ -274,7 +274,7 @@
 <section id="your-first-evaluation">
 <h2>Your First Evaluation<a class="headerlink" href="#your-first-evaluation" title="Link to this heading">¶</a></h2>
 <p>After installation, you can run your first evaluation with a simple command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--exec<span class="w"> </span>model_zoo/vlm/api_model/model_adapter.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--model<span class="w"> </span>llava-hf/llava-onevision-qwen2-7b-ov-chat-hf<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--num-workers<span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="se">\</span>
@@ -301,7 +301,7 @@
 <h2>Basic Examples<a class="headerlink" href="#basic-examples" title="Link to this heading">¶</a></h2>
 <section id="example-1-evaluating-with-vllm-backend">
 <h3>Example 1: Evaluating with VLLM Backend<a class="headerlink" href="#example-1-evaluating-with-vllm-backend" title="Link to this heading">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--exec<span class="w"> </span>model_zoo/vlm/api_model/model_adapter.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--model<span class="w"> </span>llava-hf/llava-onevision-qwen2-7b-ov-chat-hf<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--num-workers<span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="se">\</span>
@@ -312,7 +312,7 @@
 </section>
 <section id="example-2-evaluating-with-transformers-backend">
 <h3>Example 2: Evaluating with Transformers Backend<a class="headerlink" href="#example-2-evaluating-with-transformers-backend" title="Link to this heading">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--exec<span class="w"> </span>model_zoo/vlm/llama-vision/model_adapter.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--model<span class="w"> </span>meta-llama/Llama-3.2-11B-Vision-Instruct<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--output-dir<span class="w"> </span>./results/llama-vision
@@ -321,7 +321,7 @@
 </section>
 <section id="example-3-evaluating-api-based-models">
 <h3>Example 3: Evaluating API-based Models<a class="headerlink" href="#example-3-evaluating-api-based-models" title="Link to this heading">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--exec<span class="w"> </span>model_zoo/vlm/api_model/model_adapter.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--model<span class="w"> </span>gpt-4o-mini<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--num-workers<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="se">\</span>
@@ -349,7 +349,7 @@
 </pre></div>
 </div>
 <p>Then run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu_pro/mmmu_pro_standard_test.py<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu_pro/mmmu_pro_standard_test.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--exec<span class="w"> </span>model_zoo/vlm/api_model/model_adapter.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--cfg<span class="w"> </span>config.json
 </pre></div>
@@ -358,7 +358,7 @@
 <section id="multi-gpu-setup">
 <h2>Multi-GPU Setup<a class="headerlink" href="#multi-gpu-setup" title="Link to this heading">¶</a></h2>
 <p>For large models that require multiple GPUs:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu_pro/mmmu_pro_standard_test.py<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu_pro/mmmu_pro_standard_test.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--exec<span class="w"> </span>model_zoo/vlm/api_model/model_adapter.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--model<span class="w"> </span>Qwen/Qwen2-VL-72B-Instruct<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--num-workers<span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="se">\</span>
@@ -371,7 +371,7 @@
 <section id="multiple-tasks">
 <h2>Multiple Tasks<a class="headerlink" href="#multiple-tasks" title="Link to this heading">¶</a></h2>
 <p>You can evaluate multiple tasks in a single run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flagevalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span>tasks/mmvet/mmvet_v2.py<span class="w"> </span>tasks/ocrbench/ocrbench_test.py<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>evalmm<span class="w"> </span>--tasks<span class="w"> </span>tasks/mmmu/mmmu_val.py<span class="w"> </span>tasks/mmvet/mmvet_v2.py<span class="w"> </span>tasks/ocrbench/ocrbench_test.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--exec<span class="w"> </span>model_zoo/vlm/api_model/model_adapter.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--model<span class="w"> </span>llava-hf/llava-onevision-qwen2-7b-ov-chat-hf<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--output-dir<span class="w"> </span>./results/multi-task<span class="w"> </span><span class="se">\</span>
