@@ -7,7 +7,13 @@ from torch.utils.data import DataLoader
 
 import os
 
-from evalmm.server.utils import get_meta, get_task_info, submit, get_data
+from evalmm.server.utils import (
+    get_meta,
+    get_task_info,
+    submit,
+    get_data,
+    get_retrieval_data,
+)
 from evalmm.common.logger import get_logger
 from evalmm.server.evaluation_server import EvaluationServer
 from mmengine.config import Config
@@ -115,6 +121,20 @@ class TaskManager:
             return get_data(index, task_name, self.server_ip, self.server_port)
         return self.evaluation_server.get_task_data_by_index(task_name, index)
 
+    def get_retrieval_data(self, task_name: str, index: int, data_type: str):
+        if not self.local_mode:
+            return get_retrieval_data(
+                index,
+                task_name,
+                data_type,
+                self.server_ip,
+                self.server_port,
+                self.timeout,
+            )
+        return self.evaluation_server.get_task_retrieval_data(
+            task_name, index, data_type
+        )
+
 
 class BaseModelAdapter:
     def __init__(
@@ -134,6 +154,7 @@ class BaseModelAdapter:
         self.task_manager = TaskManager(
             server_ip,
             server_port,
+            timeout=timeout,
             local_mode=local_mode,
             task_names=task_names,
             **kwargs,

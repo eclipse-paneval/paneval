@@ -12,6 +12,7 @@ from evalmm.models.gemini import Gemini
 from evalmm.models.http_client import HttpClient
 from evalmm.models.hunyuan import Hunyuan
 from evalmm.models.api_response import ApiResponse, ApiUsage
+from evalmm.models.embedding_client import EmbeddingClient
 
 __all__ = [
     "GPT",
@@ -29,4 +30,5 @@ __all__ = [
     "HttpClient",
     "ApiResponse",
     "ApiUsage",
+    "EmbeddingClient",
 ]

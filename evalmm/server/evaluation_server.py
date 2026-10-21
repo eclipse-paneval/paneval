@@ -85,6 +85,11 @@ class EvaluationServer:
             self.load_dataset(task_name)
         return self.active_task[task_name][index]
 
+    def get_task_retrieval_data(self, task_name: str, index: int, data_type: str):
+        if task_name not in self.active_task:
+            self.load_dataset(task_name)
+        return self.active_task[task_name].get_data(index, data_type)
+
     def evaluate_task(
         self, task_name: str, model_name: str, new_output_dir: str = ""
     ) -> None:
@@ -201,9 +206,7 @@ class EvaluationServer:
             if data_type not in ["img", "text", "video"]:
                 return "Invalid data type", 400
             try:
-                if task_name not in self.active_task:
-                    self.load_dataset(task_name)
-                data = self.active_task[task_name].get_data(index, data_type)
+                data = self.get_task_retrieval_data(task_name, index, data_type)
             except IndexError:
                 return "Index out of range", 400
             except Exception as e:

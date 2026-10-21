@@ -30,6 +30,20 @@ def update_cfg_from_args(args):
     for key in keys:
         if getattr(args, key):
             cfg[key] = getattr(args, key)
+    for key in (
+        "text_batch_size",
+        "request_timeout",
+        "max_image_size",
+        "min_short_side",
+        "max_long_side",
+        "dimensions",
+        "truncate_prompt_tokens",
+        "query_instruction",
+        "document_instruction",
+    ):
+        value = getattr(args, key, None)
+        if value is not None:
+            cfg[key] = value
     if args.model:
         cfg["model_path"] = args.model
         cfg["model_name"] = args.model
@@ -154,6 +168,10 @@ class ServerWrapper:
             if self.args.data_root:
                 command.append("--data-root")
                 command.append(self.args.data_root)
+        else:
+            command.append("--no-local-mode")
+        if self.args.quiet:
+            command.append("--quiet")
         command.extend(["--cfg", f"{json.dumps(self.cfg)}"])
         return command
 

@@ -127,6 +127,19 @@ def parse_args():
     parser.add_argument("--url", type=str, help="url of api model")
     parser.add_argument("--api-key", type=str, help="api key of api model")
     parser.add_argument(
+        "--text-batch-size", type=int, help="captions per embedding request"
+    )
+    parser.add_argument(
+        "--request-timeout", type=float, help="embedding request timeout"
+    )
+    parser.add_argument("--max-image-size", type=int)
+    parser.add_argument("--min-short-side", type=int)
+    parser.add_argument("--max-long-side", type=int)
+    parser.add_argument("--dimensions", type=int, help="embedding dimensions")
+    parser.add_argument("--truncate-prompt-tokens", type=int)
+    parser.add_argument("--query-instruction", type=str)
+    parser.add_argument("--document-instruction", type=str)
+    parser.add_argument(
         "--use-cache", action="store_true", help="use cache of api model"
     )
     parser.add_argument(

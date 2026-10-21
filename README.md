@@ -126,6 +126,28 @@ evalmm --tasks tasks/mmmu/mmmu_val.py \
        --output-dir ./results/qwen2.5-vl-72b
 ```
 
+### Online embedding API
+
+Evaluate image–text retrieval tasks (COCO or Flickr) using an existing
+OpenAI-compatible `/v1/embeddings` endpoint. Images require vLLM's `messages`
+extension. Only image–text retrieval tasks are supported; video retrieval is
+not supported. The adapter connects to the supplied URL without starting a server.
+
+```bash
+evalmm --tasks tasks/retrieval/flickr/flickr_1k_test.py \
+       --exec model_zoo/retrieval/api_model/model_adapter.py \
+       --model <emb-model> --url http://host:8000/v1/embeddings \
+       --api-key $KEY --num-workers 8
+```
+
+Set `text_batch_size` (default 32), `request_timeout` (default 300 seconds),
+`dimensions`, `truncate_prompt_tokens`, `query_instruction` (caption prefix),
+`document_instruction` (image text part), and image resize settings in `--cfg`,
+or use their CLI forms such as `--text-batch-size` and `--query-instruction`.
+Completed embedding batches are cached in each task's `emb_cache` directory for
+resuming interrupted runs. Use a new output directory when changing models or
+embedding settings.
+
 ### Multi-Inference (Temperature > 0)
 
 ```bash

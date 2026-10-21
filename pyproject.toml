@@ -35,8 +35,14 @@ requires-python = ">=3.10"
 
 [project.optional-dependencies]
 dev = [
-    "pre-commit"
+    "pre-commit",
+    "pytest",
 ]
+
+[tool.pytest.ini_options]
+# model_zoo is not an installed package; tests import adapters from the repo root.
+pythonpath = ["."]
+testpaths = ["tests"]
 
 
 [tool.setuptools.packages.find]
